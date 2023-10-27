@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "e3488bb5-722e-457a-a6a0-712540ce73fb",
+		"name": "lms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27198603"
+	},
+	"item": [
+		{
+			"name": "create-student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"John Doe\",\n    \"student_id\": \"12345\", \n    \"email\": \"john.doe@example.com\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/students/create/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"students",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/students/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"students",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retreive-update-delete-student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Talha\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/students/2/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"students",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-subject",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Mathematics\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/subjects/create/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"subjects",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-subjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/subjects/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"subjects",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve-update-delete-subjects",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"english\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/subjects/1/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"subjects",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-results",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/results/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"results",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-result",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"student\": 2,\n    \"subject\": 2,\n    \"score\": 95.5,\n    \"result_feedback\": \"Excellent performance in the subject.\"\n    }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/results/create/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"results",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retreive-update-delete-results",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"score\":90\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/results/2/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"results",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-all-feedbacks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{localhost}}/feedback/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"feedback",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"result\": 2,\n    \"text\": \"The class materials are very clear, and the teacher is very helpful.\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/feedback/create/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"feedback",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieve-update-delete-feedback",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"text\":\"The course was great\",\n    \"result\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{localhost}}/feedback/2/",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"feedback",
+						"2",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
